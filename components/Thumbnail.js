@@ -29,8 +29,9 @@ const Thumbnail = forwardRef(({ result }, ref) => {
           {result.media_type && `${result.media_type.toUpperCase()} •`}{" "}
           {result.release_date || result.first_air_date} •{" "}
           <ThumbUpIcon className="h-5 mx-2" /> {result.vote_count} •{" "}
-          <p className="mx-2">Rating</p>
-          {result.vote_average}
+          {result.vote_average && (
+            <p className="mx-2">Rating {result.vote_average}</p>
+          )}
         </div>
       </div>
     </div>
