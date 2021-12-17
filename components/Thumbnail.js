@@ -28,10 +28,8 @@ const Thumbnail = forwardRef(({ result }, ref) => {
         <div className="flex items-center opacity-0 group-hover:opacity-100">
           {result.media_type && `${result.media_type} •`}{" "}
           {result.release_date || result.first_air_date} •{" "}
-          {/* <ThumbUpIcon className="b-5 mx-2" /> {result.vote_count} */}
-          <p className="b-5 mx-2">Likes</p>
-          {result.vote_count}
-          <p className="b-5 mx-2">Rating</p>
+          <ThumbUpIcon className="h-5 mx-2" /> {result.vote_count} •{" "}
+          <p className="mx-2">Rating</p>
           {result.vote_average}
         </div>
       </div>
